@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/MetaMask/eth-query/issues"
   },
-  "homepage": "https://github.com/MetaMask/eth-query#readme"
+  "homepage": "https://github.com/MetaMask/eth-query#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
