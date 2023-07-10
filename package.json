@@ -42,6 +42,9 @@
     "prettier": "^2.7.1",
     "prettier-plugin-packagejson": "^2.3.0"
   },
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "lavamoat": {
     "allowScripts": {
       "@lavamoat/preinstall-always-fail": false
