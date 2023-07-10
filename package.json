@@ -12,8 +12,15 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:clean": "rimraf dist && yarn build",
+    "build:docs": "typedoc",
     "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:dependencies --check && yarn lint:changelog",
     "lint:changelog": "auto-changelog validate",
     "lint:dependencies": "depcheck",
@@ -23,8 +30,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "json-rpc-random-id": "^1.0.0",
-    "xtend": "^4.0.1"
+    "json-rpc-random-id": "^1.0.0"
   },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^2.3.1",
@@ -32,6 +38,10 @@
     "@metamask/auto-changelog": "^3.1.0",
     "@metamask/eslint-config": "^11.0.1",
     "@metamask/eslint-config-nodejs": "^11.0.1",
+    "@metamask/eslint-config-typescript": "^11.0.0",
+    "@types/node": "^16",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
     "depcheck": "^1.4.3",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
@@ -40,7 +50,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.7.1",
-    "prettier-plugin-packagejson": "^2.3.0"
+    "prettier-plugin-packagejson": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.7.0",
+    "typedoc": "^0.23.15",
+    "typescript": "~4.8.4"
   },
   "engines": {
     "node": ">=16.0.0"

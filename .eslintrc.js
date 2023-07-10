@@ -5,6 +5,18 @@ module.exports = {
 
   overrides: [
     {
+      files: ['*.ts'],
+      extends: ['@metamask/eslint-config-typescript'],
+    },
+
+    {
+      files: ['*.d.ts'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
+
+    {
       files: ['*.js'],
       parserOptions: {
         sourceType: 'script',
@@ -13,5 +25,11 @@ module.exports = {
     },
   ],
 
-  ignorePatterns: ['!.eslintrc.js', '!.prettierrc.js'],
+  ignorePatterns: [
+    '!.eslintrc.js',
+    '!.prettierrc.js',
+    'dist/',
+    'docs/',
+    '.yarn/',
+  ],
 };
