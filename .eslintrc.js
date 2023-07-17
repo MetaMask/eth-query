@@ -11,6 +11,13 @@ module.exports = {
       },
       extends: ['@metamask/eslint-config-nodejs'],
     },
+    {
+      files: ['*.d.ts'],
+      extends: ['@metamask/eslint-config-typescript'],
+      parserOptions: {
+        sourceType: 'script',
+      },
+    },
   ],
 
   ignorePatterns: ['!.eslintrc.js', '!.prettierrc.js'],
