@@ -12,7 +12,8 @@
   },
   "license": "ISC",
   "author": "",
-  "main": "index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "lint": "yarn lint:eslint && yarn lint:misc --check && yarn lint:dependencies --check && yarn lint:changelog",
     "lint:changelog": "auto-changelog validate",
