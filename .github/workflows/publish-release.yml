@@ -27,7 +27,6 @@ jobs:
       - name: Install
         run: |
           yarn install
-          yarn build
       - uses: actions/cache@v3
         id: restore-build
         with:
