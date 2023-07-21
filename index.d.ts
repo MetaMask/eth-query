@@ -1,4 +1,4 @@
-declare module 'eth-query' {
+declare module '@metamask/eth-query' {
   // What it says on the tin. We omit `null`, as that value is used for a
   // successful response to indicate a lack of an error.
   type EverythingButNull =
