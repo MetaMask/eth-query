@@ -1,6 +1,6 @@
 {
   "name": "@metamask/eth-query",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "like web3 but for minimalists",
   "homepage": "https://github.com/MetaMask/eth-query#readme",
   "bugs": {
