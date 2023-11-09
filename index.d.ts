@@ -10,6 +10,16 @@ declare module '@metamask/eth-query' {
     | symbol
     | undefined;
 
+  type Json =
+    | null
+    | boolean
+    | number
+    | string
+    | Json[]
+    | { [prop: string]: Json };
+
+  type JsonRpcParams = Json[] | Record<string, Json>;
+
   type ProviderSendAsyncResponse<Result> = {
     error?: { message: string };
     result?: Result;
@@ -21,13 +31,13 @@ declare module '@metamask/eth-query' {
   ) => void;
 
   type Provider = {
-    sendAsync<Params, Result>(
+    sendAsync<Params extends JsonRpcParams, Result>(
       payload: SendAsyncPayload<Params>,
       callback: ProviderSendAsyncCallback<Result>,
     ): void;
   };
 
-  type SendAsyncPayload<Params> = {
+  type SendAsyncPayload<Params extends JsonRpcParams> = {
     id: number;
     jsonrpc: '2.0';
     method: string;
@@ -43,7 +53,7 @@ declare module '@metamask/eth-query' {
   export default class EthQuery {
     constructor(provider: Provider);
 
-    sendAsync<Params, Result>(
+    sendAsync<Params extends JsonRpcParams, Result>(
       opts: Partial<SendAsyncPayload<Params>>,
       callback: SendAsyncCallback<Result>,
     ): void;
