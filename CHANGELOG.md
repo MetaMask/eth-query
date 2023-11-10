@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [4.0.0]
 ### Changed
-- BREAKING: Narrow type of provider to match SafeEventEmitterProvider from `@metamask/eth-json-rpc-provider` ([#21](https://github.com/MetaMask/eth-query/pull/21))
+- **BREAKING**: Narrow type of provider to match SafeEventEmitterProvider from `@metamask/eth-json-rpc-provider` ([#21](https://github.com/MetaMask/eth-query/pull/21))
 
 ## [3.0.1]
 ### Fixed
